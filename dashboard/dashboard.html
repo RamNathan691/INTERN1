@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <style>
+     .container{
+         font-family: "Josefin Sans";
+        font-size:20px;
+        }
+.tabs .tab a:hover{
+   
+    color: #8510d8;
+    background-color:#8741bb;
+ 
+    
+}
+.tabs .tab a{
+    color: white ;
+    background-color:#8510d8
+}
+ .tabs .tab a.active{
+    color: #8510d8;
+    background-color:white;
+}
+.tabs .indicator{
+    background-color:#8510d8
+}
+.material-icons.md-dark{
+    color:rgba(255,0,0,1)   
+   }
+   .material-icons.md-light{
+    color:rgba(255,255,255,1) ;
+     
+   }
+   img{
+       background-size: contain;
+   }
+   #more{
+       color:white;
+       background-color: #8510d8;
+   }
+   #more :hover{
+       background-color: transparent;
+   }
+   .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+    color: white;
+   }
+     </style>
+     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" 
+     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col l10 s8">
+                <div class="card">
+                    <div class="card-title"><center><b>Dashboard</b></center></div>
+                    <div class="card-content">
+                            <div>
+                            <img src="images.png" alt="User" width="200px" height="200px">
+                            </div>
+                            <span><b>R.PRAKASH </b></span>
+                            <address>Chennai,India</address>
+                            <contact><i class="fa fa-phone"></i>&nbsp;1234567890<br/>
+                            <i class="fa fa-envelope"></i>&nbsp;sample@email.com</contact>
+                            <div class="user-bio">User bio:
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Alias unde voluptas, quisquam magnam corrupti dignissimos vel provident 
+                                    odit voluptatibus iure esse velit rerum, aut nemo perferendis cumque error est vitae!</p>
+                            <button class="btn red"><i class="material-icons left">message</i>Chat</button> 
+                            <button class="btn red"><i class="material-icons left">add</i>Follow</button>
+                            </div><br/>
+                            <div class="rating"><p>4.5</p>
+                            <p class="stars">
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                                <i class="material-icons">star</i>
+                            </p></div>
+                            <div class="reviews">
+                                <p>123&nbsp;&nbsp;reviews</p>
+                            </div>
+                            <div class="activity">
+                                <div class="row">
+                                    <div class="col s12">
+                                        <ul class="tabs">
+                                            <li class="tab col s3"><a href="#posts">POSTS</a></li>
+                                            <li class="tab col s3"><a href="#activity" >ACTIVITY</a></li>
+                                        </ul>
+                                        <div id="posts"class="col s12">
+                                            <p>POSTS</p>
+                                            <div class="card">
+                                                    <div class="card-image small">
+                                                    <img src="download.png" alt="Image of a road was here,you missed it" width="270px" height="170px" />
+                                                    <br/>
+                                                    <a  class="btn-floating halfway-fab white" onclick="change_it()">
+                                                            <i id="icon" class="material-icons md-dark">favorite_border</i>
+                                                    </a>
+                                                </div>
+                                                    <div class="card-content">
+                                                            
+                                                        <div class="card-title"><b><h5>Lorem</h5></b></div>
+                                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam nulla error doloremque libero dignissimos dolorem inventore fugiat, 
+                                                            reprehenderit eum aliquam blanditiis perspiciatis nesciunt, consequuntur atque, optio adipisci architecto cum at!</p>
+                                                    </div>
+                                              
+                                            
+                                                </div>
+                                        </div>
+                                    <div id="activity"class="col s12">
+                                       <p>ACTIVITY</p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nostrum accusantium labore voluptatibus distinctio molestiae illum? Non quam, deserunt provident corporis laudantium officia voluptate doloremque, at aperiam impedit harum facere!
+                                    </p>
+                                 </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div> 
+    
+    
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+            $(document).ready(function(){
+             $('.tabs').tabs()
+            })
+            function change_it()
+    { if(document.getElementById("icon").innerHTML=="favorite"){
+        document.getElementById("icon").innerHTML="favorite_border"
+    }
+    else{
+        document.getElementById("icon").innerHTML="favorite"
+    }
+       
+
+    }
+        </script>
+</body>
+</html>
